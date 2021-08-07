@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live Demo
 
-###You can see live project on [Online](https://blog-virid-eta.vercel.app)
+You can see live project in here: [Viwe Online](https://blog-virid-eta.vercel.app)
 
 ### About Project
 This project you can see a blog website simapel.
