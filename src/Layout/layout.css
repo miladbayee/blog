@@ -1,0 +1,6 @@
+main{
+    min-height: calc(100vh - 130px);
+    background-color: var(--bg-color);
+    width:90%;
+    margin:0 auto;
+}

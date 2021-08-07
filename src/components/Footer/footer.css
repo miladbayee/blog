@@ -1,0 +1,9 @@
+.footer {
+  min-height: 40px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  color: var(--withe-color);
+}

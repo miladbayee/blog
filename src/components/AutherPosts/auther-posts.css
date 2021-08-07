@@ -1,0 +1,27 @@
+.auther__posts{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.auther__posts__content{
+    margin-left: .7rem;
+    padding: 8px;
+}
+
+.auther__posts__content h2{
+    color:var(--primary-color);
+    cursor: pointer;
+}
+.auther__posts__content p{
+    margin: 1rem 0;
+    color:var(--text-primary)
+}
+
+.auther__posts__content__date{
+    color:var(--secondary-text)
+}
+
+.auther__posts__content__date span:nth-child(2){
+    margin: 0 .7rem;
+    font-size: 30px;
+}

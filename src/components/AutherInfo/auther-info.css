@@ -1,0 +1,29 @@
+.auther__info{
+   width: 30%;
+   height: inherit;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.auther__info h4{
+    margin: 1rem 0;
+}
+
+.auther__info p span:first-child{
+    color: var(--text-primary);
+}
+.auther__info p span:last-child{
+    color: rgba(208, 1, 1, 0.987);
+    font-weight: 600;
+}
+
+.auther__info__img{
+    max-width: 150px;
+    height: auto;
+}
+
+.auther__info__img img {
+    width:100% ;
+}

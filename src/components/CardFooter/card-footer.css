@@ -1,0 +1,33 @@
+.card__footer__auther{
+  display: flex;
+  align-items: center;
+}
+
+.card__footer__auther>div{
+  width: 40px;
+  height: auto;
+}
+
+.card__footer__auther>div img{
+  width: 100%;
+}
+
+.card__footer__auther p {
+  color: var(--text-primary);
+  margin-left: .7rem;
+}
+
+.card__footer__auther p:hover {
+  color: var(--primary-color);
+  transition: ease-in 0.2s;
+}
+
+.card__footer span {
+  color: var(--secondary-text);
+  font-size: 14px;
+}
+
+.card__footer span:nth-child(2) {
+  margin: 0 10px;
+  font-size: 30px;
+}

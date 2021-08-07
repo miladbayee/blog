@@ -1,0 +1,38 @@
+.card {
+  max-width: calc(100% / 3);
+  list-style: none;
+  margin-top: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.card:last-child {
+  margin-bottom: 3rem;
+}
+
+.card__body {
+  max-width: 350px;
+  min-height: 90px;
+  margin-bottom: 30px;
+}
+
+.card__body h3 {
+  margin: 15px 0;
+  min-height: 45px;
+}
+
+.card__body h3>a {
+  color:var(--text-primary)
+}
+
+.card__body h3:hover>a {
+  color:var(--primary-color);
+  transition: ease-in 0.5s;
+}
+
+.card__body p {
+  max-height: 36px;
+  overflow: hidden;
+  color: var(--secondary-text);
+}
