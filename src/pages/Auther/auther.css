@@ -1,5 +1,13 @@
-.auther{
-    min-height: inherit;
+.auther {
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .auther {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+  }
 }

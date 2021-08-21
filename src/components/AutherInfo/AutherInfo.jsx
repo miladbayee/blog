@@ -7,11 +7,13 @@ const AutherInfo = ({ auther, postsNumber }) => {
       <div className="auther__info__img">
         <img src={avatar} alt={`${auther} avarta`} />
       </div>
-      <h4>{auther}</h4>
-      <p>
-        <span>Number of posts : </span>
-        <span>{postsNumber}</span>
-      </p>
+      <div className="auther__info__detail">
+        <h4>{auther}</h4>
+        <p>
+          <span>Number of posts : </span>
+          <span>{postsNumber}</span>
+        </p>
+      </div>
     </div>
   );
 };
