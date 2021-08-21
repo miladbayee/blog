@@ -1,5 +1,6 @@
-import { useHistory } from "react-router-dom";
 import "./auther-posts.css";
+import { useHistory } from "react-router-dom";
+import PlaceholderLoader from "../PlaceholderLoder";
 
 const AutherCard = ({ ...props }) => {
   const history = useHistory();
@@ -11,7 +12,7 @@ const AutherCard = ({ ...props }) => {
   return (
     <li className="auther__posts">
       <div>
-        <img src={img.thumbnail} alt={title} />
+        { img.thumbnail? (<img src={img.thumbnail} alt={title} />): <PlaceholderLoader viewBox="0 0 460 460" />}
       </div>
       <div className="auther__posts__content">
         <h2 onClick={handleClikPost}>{title}</h2>

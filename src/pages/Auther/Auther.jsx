@@ -1,5 +1,5 @@
 import "./auther.css";
-import { useContext, useMemo } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import AppContext from "../../context/appContext";
 
@@ -9,13 +9,26 @@ import Loader from "../../components/Loader";
 
 const Auther = () => {
   const { auther } = useParams();
-  const editAuther = useMemo(() => auther.split("-").join(" "), [auther]);
   const { posts } = useContext(AppContext);
+  const [autherPosts, setAutherPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const editAuther = useMemo(() => auther.split("-").join(" "), [auther]);
 
-  const autherPosts = posts.filter((item) => item.auther[0] === editAuther);
-  const renderAutherPosts = autherPosts.map((post) => (
-    <AutherPosts key={post.id} {...post} />
-  ));
+  useEffect(() => {
+    if (isLoading) {
+      const autherPostsList = posts.filter(
+        (item) => item.auther[0] === editAuther
+      );
+      setAutherPosts(autherPostsList);
+    }
+    return () => {
+      setIsLoading(false);
+    };
+  }, [posts, editAuther, isLoading]);
+
+  const renderAutherPosts =
+    autherPosts.length > 0 &&
+    autherPosts.map((post) => <AutherPosts key={post.id} {...post} />);
 
   return (
     <div className="auther">
