@@ -1,12 +1,20 @@
-import './notfound.css'
-import notfoundImg from '../../assets/images/404.png'
+import "./notfound.css";
+import notfoundImg from "../../assets/images/404.png";
+import { useHistory } from "react-router-dom";
 
 const NotFound = () => {
-    return (
-        <div className='not-found'>
-           <img src={notfoundImg} alt="" />
-        </div>
-    )
-}
+  const {push} = useHistory();
 
-export default NotFound
+  const handleClick=()=>{
+      push('/')
+  }
+
+  return (
+    <div className="not-found">
+      <img src={notfoundImg} alt="" />
+      <button className='not-found__btn' onClick={handleClick}>home page</button>
+    </div>
+  );
+};
+
+export default NotFound;
