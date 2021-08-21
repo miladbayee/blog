@@ -1,10 +1,12 @@
 .card {
-  max-width: calc(100% / 3);
   list-style: none;
-  margin-top: 2rem;
   box-shadow: var(--box-shadow);
-  padding: 8px;
+  padding: 20px;
   border-radius: 4px;
+}
+
+.card__header img{
+  width:100%
 }
 
 .card:last-child {

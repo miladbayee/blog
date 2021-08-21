@@ -4,15 +4,20 @@ import { useContext } from "react";
 import Card from "../Card/Card";
 import Loader from "../Loader";
 import AppContext from "../../context/appContext";
-
+import Grid from "../Grid/Grid";
 
 const Posts = () => {
-  const { posts} = useContext(AppContext);
+  const { posts } = useContext(AppContext);
 
-  const renderPosts =
-    posts.length>0 && posts.map((post) => <Card key={post.id} {...post} />);
+  const renderPosts = posts.length > 0 && (
+    <Grid>
+      {posts.map((post) => (
+        <Card key={post.id} {...post} />
+      ))}
+    </Grid>
+  );
 
-  return posts.length>0 ? (
+  return posts.length > 0 ? (
     <ul className="posts">{renderPosts}</ul>
   ) : (
     <Loader />
